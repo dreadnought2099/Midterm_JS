@@ -17,9 +17,9 @@ function validateLogin(event) {
     alert("Login successful!");
 
     if (username === "RMAGALLANEZ") {
-      window.location.href = "../Profile/RMAGALLANEZ.html";
+      window.location.href = "RMAGALLANEZ.html";
     } else if (username === "Yutang") {
-      window.location.href = "../Profile/Yutang.html";
+      window.location.href = "Yutang.html";
     }
 
     return true;

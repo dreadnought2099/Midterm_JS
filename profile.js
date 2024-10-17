@@ -1,5 +1,5 @@
 function logout() {
-  window.location.href = "../LogIn/index.html";
+  window.location.href = "index.html";
 }
 
 const currentYear = new Date().getFullYear();
