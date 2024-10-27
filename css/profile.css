@@ -34,8 +34,9 @@ body {
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #393939;
-  max-width: 500px;
-  max-height: 550px;
+  width: 700px;
+  height: fit-content;
+  margin: 0 auto;
 }
 
 button {
@@ -65,8 +66,42 @@ button:hover {
 
 .quote strong {
   display: block;
+  margin-top: 10px;
 }
 
 h2 {
   margin-bottom: 5px;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2em;
+  justify-content: center;
+  gap: 5px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: lightgray;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+.star-rating input:checked ~ label {
+  color: gold;
+}
+
+#saved-rating {
+  display: inline-block;
+  min-width: 10px;
+  text-align: center;
 }

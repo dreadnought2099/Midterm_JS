@@ -1,20 +1,19 @@
 function validateLogin(event) {
-  // Prevent default form submission
   event.preventDefault();
 
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   const errorMessage = document.getElementById("error-message");
 
-  // Hardcoded valid users
+  // hardcoded or predefined valid users
   const validUsers = {
     RMAGALLANEZ: "newt",
     Yutang: "demon",
   };
 
-  // Validate credentials
   if (validUsers[username] && validUsers[username] === password) {
-    alert("Login successful!");
+    localStorage.setItem("loggedInUser", username);
+    alert("Welcome " + username + "!");
 
     if (username === "RMAGALLANEZ") {
       window.location.href = "profile/RMAGALLANEZ.html";
